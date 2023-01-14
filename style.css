@@ -45,7 +45,6 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
     max-width: 100%;
 }
 
@@ -72,6 +71,12 @@ h6 {
     overflow-wrap: break-word;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     margin: 2rem;
 }
@@ -88,7 +93,7 @@ footer {
 body {
     background-color: var(--clr-background);
     font-family: var(--ff-regular);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-light);
     font-size: 18px;
     color: var(--clr-primary);
 
@@ -98,17 +103,30 @@ body {
     justify-content: center;
 }
 
+hr {
+    border-top: 1px solid var(--clr-primary);
+}
+
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+
+.flex-gap {
+    gap: .5rem;
+}
+
 .card {
     background-color: var(--clr-card-background);
     padding: 2rem;
     border-radius: 1rem;
     display: grid;
-    gap: 2rem;
-    width: 21rem;
+    gap: 1rem;
+    width: 25rem;
 }
 
 .card__img {
-    border-radius: 1rem;;
+    border-radius: 1rem;
 }
 
 .card__content {
@@ -118,10 +136,30 @@ body {
 
 .card__title {
     color: white;
+    font-weight: var(--fw-regular);
 }
 
-.card__info {
+.card__description {
+    line-height: 1.6;
+}
+
+.card__availability {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+}
+
+.card__availability .price {
+    color: var(--clr-secondary)
+}
+
+.card__creator .avatar {
+    width: 2rem;
+    margin-right: 1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.card__creator .creator-name {
+    color: white;
 }
