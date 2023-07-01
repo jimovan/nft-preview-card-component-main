@@ -125,8 +125,44 @@ hr {
     width: 25rem;
 }
 
+.card__img-container {
+    position: relative;
+    width: 100%;
+}
+
+.card__img-container:hover .img-overlay {
+    opacity: 1;
+}
+
 .card__img {
     border-radius: 1rem;
+    display: block;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    background-color: hsla(178, 100%, 50%, 0.4);
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.img-icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .card__content {
@@ -137,6 +173,11 @@ hr {
 .card__title {
     color: white;
     font-weight: var(--fw-regular);
+}
+
+.card__title:hover {
+    color: var(--clr-secondary);
+    cursor: pointer;
 }
 
 .card__description {
@@ -162,4 +203,9 @@ hr {
 
 .card__creator .creator-name {
     color: white;
+}
+
+.card__creator .creator-name:hover {
+    color: var(--clr-secondary);
+    cursor: pointer;
 }
