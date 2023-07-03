@@ -11,6 +11,8 @@
     --fw-light: 300;
     --fw-regular: 400;
     --fw-bold: 700;
+
+    --img-border-radius: .75rem;
 }
 
 /*
@@ -94,17 +96,13 @@ body {
     background-color: var(--clr-background);
     font-family: var(--ff-regular);
     font-weight: var(--fw-light);
-    font-size: 18px;
+    font-size: 16px;
     color: var(--clr-primary);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-hr {
-    border-top: 1px solid var(--clr-primary);
 }
 
 .flex-align {
@@ -118,11 +116,11 @@ hr {
 
 .card {
     background-color: var(--clr-card-background);
-    padding: 2rem;
-    border-radius: 1rem;
+    padding: 1.5rem;
+    border-radius: var(--img-border-radius);
     display: grid;
     gap: 1rem;
-    width: 25rem;
+    max-width: 20rem;
 }
 
 .card__img-container {
@@ -135,7 +133,7 @@ hr {
 }
 
 .card__img {
-    border-radius: 1rem;
+    border-radius: var(--img-border-radius);
     display: block;
 }
 
@@ -152,7 +150,7 @@ hr {
     background-color: hsla(178, 100%, 50%, 0.4);
     cursor: pointer;
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: .75rem;
 }
 
 .img-icon {
@@ -168,6 +166,10 @@ hr {
 .card__content {
     display: grid;
     gap: 1rem;
+}
+
+.card__content h2 {
+    font-size: 22px;
 }
 
 .card__title {
@@ -191,7 +193,13 @@ hr {
 }
 
 .card__availability .price {
-    color: var(--clr-secondary)
+    color: var(--clr-secondary);
+    font-weight: 400;
+}
+
+.card__creator {
+    padding-top: 1rem;
+    border-top: 1px solid var(--clr-line);
 }
 
 .card__creator .avatar {
